@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicWic - Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>PicWix</h1>
+    </nav>
+    
+    <div class="full-img" id="fullImgBox">
+        <img src="Gallery/img1.jpg".jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+
+    </div>
+    <div class="img-gallery">
+        <img src="Gallery/img1.jpg" onclick="openFullImg(this.src)">
+        <img src="Gallery/img2.jpg" onclick="openFullImg(this.src)">
+        <img src="Gallery/img3.jpg" onclick="openFullImg(this.src)">
+        <img src="Gallery/img4.jpg" onclick="openFullImg(this.src)">
+        <img src="Gallery/img5.jpg" onclick="openFullImg(this.src)">
+        <img src="Gallery/img6.jpg" onclick="openFullImg(this.src)">
+        <img src="Gallery/img7.jpg" onclick="openFullImg(this.src)">
+        <img src="Gallery/img8.jpg" onclick="openFullImg(this.src)">
+    </div>
+
+    <script>
+
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(PicWic){
+            fullImgBox.style.display = "flex";
+            fullImg.src = PicWic;
+        }
+
+        function closeFullImg(){
+            fullImgBox.style.display = "none";
+        }
+
+    </script>
+
+    
+</body>
+</html>
